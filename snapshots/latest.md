@@ -1,0 +1,32 @@
+# Warsh Dashboard Hermes/Wiki Snapshot
+
+asOf: 2026-06-08T13:07:31Z
+generatedBy: hermes-default-hourly-github-sync
+
+## Summary
+
+- Regime: 高温脆弱但信用尚未显性定价
+- Risk score: 15
+- Auto source coverage: 13/13
+- Scenario matrix: Inflation Scare
+
+## Thesis
+
+当前 dashboard 应保持云端公开源自刷新；本地 Hermes 每 15 分钟或按需生成 snapshot，用来覆盖 BofA FMS、AI capex、DRAM/HBM、MOVE 与 LMVK 投研解释。
+
+## Key debates
+
+- 信用利差仍安全，是否足以抵消估值/AI拥挤风险？
+- AI capex 是生产率投资，还是会带来 ROIC 与供给瓶颈压力？
+- ON RRP 接近耗尽后，准备金与 SOFR-IORB 是否会成为下一条触发线？
+
+## Watch items
+
+- HY OAS 是否突破 400bp
+- 七巨头 SPY 权重是否从 34% 高位回落
+- SOFR-IORB 是否持续上行
+- BofA FMS cash/equity allocation 的下一月 vintage
+
+## Wiki refs
+
+- **Hosted dynamic dashboard GitHub snapshot sync skill** (2026-06-02): 规定托管动态数据网站默认用 GitHub snapshot 同步 Hermes/wiki 数据，不直接暴露本地 agent。

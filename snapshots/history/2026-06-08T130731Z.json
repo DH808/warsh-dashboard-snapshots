@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "warsh-agent-snapshot-v1",
+  "asOf": "2026-06-08T13:07:31Z",
+  "generatedBy": "hermes-default-hourly-github-sync",
+  "source": {
+    "mode": "local-hermes-github-sync",
+    "syncInterval": "hourly",
+    "publisher": "mac-local-launchagent",
+    "publicSafety": "sanitized snapshot only; no live local-Hermes command API"
+  },
+  "summary": {
+    "oneLine": "公开数据看板已能云端自刷新；Hermes/wiki 层用于补足付费/半公开 overlay 与投研解释。",
+    "regime": "高温脆弱但信用尚未显性定价",
+    "riskScore": 15,
+    "autoSourceCoverage": "13/13",
+    "scenarioMatrix": "Inflation Scare",
+    "dashboardUpdatedAt": "2026-06-02T14:31:16.965Z"
+  },
+  "manualOverlays": {
+    "bofa_cash": {
+      "value": 3.9,
+      "display": "3.9%",
+      "asOf": "2026-05 Reuters/BofA FMS · Hermes snapshot",
+      "sourceType": "Hermes/wiki snapshot · manual/BofA FMS summary",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "date": "2026-05",
+          "source": "Reuters/BofA FMS summary",
+          "implication": "现金比低位，仓位拥挤；适合以 monthly vintage 更新，不伪装为自动 API。"
+        }
+      ]
+    },
+    "ai_capex": {
+      "value": 602,
+      "display": "$602B",
+      "asOf": "2026E company guidance + sell-side overlay · Hermes snapshot",
+      "sourceType": "Hermes/wiki snapshot · company filings + sell-side overlay",
+      "confidence": "medium-low",
+      "evidence": [
+        {
+          "date": "2026E",
+          "source": "Company guidance / sell-side attribution overlay",
+          "implication": "AI capex 强度处于高位；后续应由本地 Hermes 汇总财报和会议纪要更新。"
+        }
+      ]
+    },
+    "dram_hbm": {
+      "value": 60,
+      "display": "+50–70% QoQ",
+      "asOf": "2026-05/06 TrendForce/news · Hermes snapshot",
+      "sourceType": "Hermes/wiki snapshot · TrendForce/news overlay",
+      "confidence": "medium-low",
+      "evidence": [
+        {
+          "date": "2026-05/06",
+          "source": "TrendForce/news overlay",
+          "implication": "底层价格多为付费源，适合 snapshot 方式同步公开摘要和判断。"
+        }
+      ]
+    },
+    "move_index": {
+      "value": 75,
+      "display": "~75",
+      "asOf": "2026-05 original snapshot / ICE unavailable · Hermes snapshot",
+      "sourceType": "Hermes/wiki snapshot · ICE/BofA paid-data placeholder",
+      "confidence": "low",
+      "evidence": [
+        {
+          "date": "2026-05",
+          "source": "Original snapshot / paid-data placeholder",
+          "implication": "MOVE 原始数据不应在云端伪装自动，保留为低置信度 overlay。"
+        }
+      ]
+    }
+  },
+  "agentAnalysis": {
+    "thesis": "当前 dashboard 应保持云端公开源自刷新；本地 Hermes 每 15 分钟或按需生成 snapshot，用来覆盖 BofA FMS、AI capex、DRAM/HBM、MOVE 与 LMVK 投研解释。",
+    "currentRegime": "高温脆弱但信用尚未显性定价",
+    "keyDebates": [
+      "信用利差仍安全，是否足以抵消估值/AI拥挤风险？",
+      "AI capex 是生产率投资，还是会带来 ROIC 与供给瓶颈压力？",
+      "ON RRP 接近耗尽后，准备金与 SOFR-IORB 是否会成为下一条触发线？"
+    ],
+    "watchItems": [
+      "HY OAS 是否突破 400bp",
+      "七巨头 SPY 权重是否从 34% 高位回落",
+      "SOFR-IORB 是否持续上行",
+      "BofA FMS cash/equity allocation 的下一月 vintage"
+    ],
+    "disconfirmingEvidence": [
+      "CPI/5Y BEI/Brent 同步回落",
+      "AI earnings revision 持续上修且 capex ROI 被验证",
+      "HY/IG OAS 继续维持低位，KRE 企稳"
+    ],
+    "scenarioLines": [
+      "估值与集中度同时在危险区：权益市场对 AI 盈利、长端利率或仓位变化更敏感。",
+      "ON RRP 基本耗尽但银行准备金仍未破线：货币管道缓冲变薄，但系统性压力尚未显性化。",
+      "信用利差仍处安全区：市场尚未定价信用/流动性踩踏，这降低了“立刻崩”的概率。",
+      "通胀/油价/通胀预期仍构成政策约束：降息与继续缩表的组合更依赖市场不出事。",
+      "AI capex 与 HBM/DRAM 涨价共同指向供给瓶颈：AI 投资不只是增长叙事，也可能带来通胀/资本开支二阶压力。"
+    ]
+  },
+  "evidenceLedger": [
+    {
+      "date": "2026-06-02",
+      "source": "Local Hermes dashboard review",
+      "implication": "原 MVP 不是 Hermes 执行入口，应通过 GitHub snapshot sync 接入本地研究层。"
+    }
+  ],
+  "wikiRefs": [
+    {
+      "title": "Hosted dynamic dashboard GitHub snapshot sync skill",
+      "asOf": "2026-06-02",
+      "publicSummary": "规定托管动态数据网站默认用 GitHub snapshot 同步 Hermes/wiki 数据，不直接暴露本地 agent。",
+      "logicalPath": "local://.hermes/skills/software-development/hosted-dynamic-dashboard-github-snapshot-sync/SKILL.md"
+    }
+  ],
+  "publishedFor": {
+    "dashboard": "warsh-dynamic-dashboard",
+    "renderUrl": "https://warsh-dynamic-dashboard.onrender.com",
+    "githubRepo": "https://github.com/DH808/warsh-dashboard-snapshots"
+  }
+}
