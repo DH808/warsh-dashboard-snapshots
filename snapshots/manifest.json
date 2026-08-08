@@ -1,8 +1,8 @@
 {
   "latest": "snapshots/latest.json",
   "latestMarkdown": "snapshots/latest.md",
-  "lastPublishedAt": "2026-08-08T19:19:07Z",
-  "historyJson": "snapshots/history/2026-08-08T191907Z.json",
-  "historyMarkdown": "snapshots/history/2026-08-08T191907Z.md",
+  "lastPublishedAt": "2026-08-08T20:19:12Z",
+  "historyJson": "snapshots/history/2026-08-08T201912Z.json",
+  "historyMarkdown": "snapshots/history/2026-08-08T201912Z.md",
   "schemaVersion": "warsh-agent-snapshot-v1"
 }
